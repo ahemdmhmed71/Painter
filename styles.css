@@ -116,3 +116,30 @@ body {
     color: #666;
     margin: 0;
 }
+
+/* القواعد الأساسية للصور */
+.images img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* استعلام وسائط لتحسين عرض الصور على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .images img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: cover; /* لتعديل ملاءمة الصور داخل العنصر */
+    }
+}
+
+@media (max-width: 480px) { /* استعلام وسائط لشاشات أصغر */
+    .images img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+}
