@@ -55,12 +55,22 @@ body {
     justify-content: center;
 }
 
+/* القواعد الأساسية للصور */
 .images img {
-    width: calc(33.333% - 20px); /* حساب العرض بحيث تكون 3 صور في الصف */
-    max-width: 300px;
-    margin: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* استعلام وسائط لتحسين عرض الصور على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .images img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 .footer {
@@ -105,21 +115,4 @@ body {
     font-size: 16px;
     color: #666;
     margin: 0;
-}
-
-.images img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 15px;
-}
-
-/* استعلام وسائط لتكبير الصور بشكل أفضل على الشاشات الصغيرة */
-@media (max-width: 768px) {
-    .images img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
 }
