@@ -1,4 +1,4 @@
-/* الأساسيات العامة */
+/* الأنماط العامة */
 body {
     font-family: Arial, sans-serif;
     direction: rtl;
@@ -56,35 +56,12 @@ body {
     justify-content: center;
 }
 
-/* القواعد الأساسية للصور */
 .images img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 15px;
-}
-
-/* استعلام وسائط لتحسين عرض الصور على الشاشات الصغيرة */
-@media (max-width: 768px) {
-    .images {
-        flex-direction: column; /* لتنسيق الصور بشكل عمودي على الشاشات الصغيرة */
-    }
-    
-    .images img {
-        width: 100%;
-        height: auto;
-        max-width: none; /* إزالة الحد الأقصى للعرض */
-        object-fit: cover; /* لضمان ملاءمة الصورة بشكل جيد */
-    }
-}
-
-@media (max-width: 480px) {
-    .images img {
-        width: 100%;
-        height: auto;
-        max-width: none;
-    }
+    width: calc(33.333% - 20px); /* حساب العرض بحيث تكون 3 صور في الصف */
+    max-width: 300px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 .footer {
@@ -129,4 +106,17 @@ body {
     font-size: 16px;
     color: #666;
     margin: 0;
+}
+
+/* استعلامات الوسائط */
+@media (max-width: 768px) {
+    .images img {
+        width: calc(50% - 20px); /* صورتين في الصف الواحد */
+    }
+}
+
+@media (max-width: 480px) {
+    .images img {
+        width: calc(100% - 20px); /* صورة واحدة في الصف الواحد */
+    }
 }
