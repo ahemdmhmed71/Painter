@@ -1,3 +1,4 @@
+/* الأساسيات العامة */
 body {
     font-family: Arial, sans-serif;
     direction: rtl;
@@ -66,10 +67,23 @@ body {
 
 /* استعلام وسائط لتحسين عرض الصور على الشاشات الصغيرة */
 @media (max-width: 768px) {
+    .images {
+        flex-direction: column; /* لتنسيق الصور بشكل عمودي على الشاشات الصغيرة */
+    }
+    
     .images img {
         width: 100%;
-        max-width: 100%;
         height: auto;
+        max-width: none; /* إزالة الحد الأقصى للعرض */
+        object-fit: cover; /* لضمان ملاءمة الصورة بشكل جيد */
+    }
+}
+
+@media (max-width: 480px) {
+    .images img {
+        width: 100%;
+        height: auto;
+        max-width: none;
     }
 }
 
@@ -115,31 +129,4 @@ body {
     font-size: 16px;
     color: #666;
     margin: 0;
-}
-
-/* القواعد الأساسية للصور */
-.images img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 15px;
-}
-
-/* استعلام وسائط لتحسين عرض الصور على الشاشات الصغيرة */
-@media (max-width: 768px) {
-    .images img {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        object-fit: cover; /* لتعديل ملاءمة الصور داخل العنصر */
-    }
-}
-
-@media (max-width: 480px) { /* استعلام وسائط لشاشات أصغر */
-    .images img {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-    }
 }
