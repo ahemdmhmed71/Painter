@@ -120,3 +120,26 @@ body {
         width: calc(100% - 20px); /* صورة واحدة في الصف الواحد */
     }
 }
+
+
+.cta {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    color: white;
+    background-color: #25D366; /* اللون الأخضر لواتساب */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.phone-button {
+    background-color: #4CAF50; /* لون أخضر مختلف لزر الاتصال */
+}
+
+.cta:hover {
+    background-color: #1DA851; /* تغيير اللون عند التمرير */
+}
+
